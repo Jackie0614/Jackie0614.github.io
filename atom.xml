@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Jackie0614.github.io/"/>
-  <updated>2017-03-29T14:30:45.472Z</updated>
+  <updated>2017-04-10T23:45:25.490Z</updated>
   <id>http://Jackie0614.github.io/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js密码强度验证</title>
+    <link href="http://Jackie0614.github.io/2017/04/11/js%E5%AF%86%E7%A0%81%E5%BC%BA%E5%BA%A6%E9%AA%8C%E8%AF%81/"/>
+    <id>http://Jackie0614.github.io/2017/04/11/js密码强度验证/</id>
+    <published>2017-04-10T23:44:03.000Z</published>
+    <updated>2017-04-10T23:45:25.490Z</updated>
+    
+    <content type="html"><![CDATA[<p>我们知道在网页中，我们不可避免的要验证许多表单，因此我们今天就来写一个小的表单密码验证的小案例，来体会一下他的思想</p>
+<h2 id="css代码就不写了"><a href="#css代码就不写了" class="headerlink" title="css代码就不写了"></a>css代码就不写了</h2><p>css代码很简单，我就不写了，大家可以下去自行写一下，没什么技术含量，下面我直接写js部分了</p>
+<h2 id="js部分"><a href="#js部分" class="headerlink" title="js部分"></a>js部分</h2><p>首先我们要有思路，把他的几个部分分开，不能乱写，瞎写是吧？我就简单的把它分为两个部分：1.表单显示 2.密码强度检测<br>这两个事件之后我们就可以添加事件监听(声明：以下代码都以在chrome下运行为准)</p>
+<h3 id="表单显示"><a href="#表单显示" class="headerlink" title="表单显示"></a>表单显示</h3><p>考虑到有多中情况，我们这里用到switch方法，可以考虑到多种情况。其次就是将switch中的参数结果计数方式依从密码强度检测中的计数方式，这是重点。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">putStr</span></span>()&#123;</div><div class="line">        var Lowcolor=document.getElementsByTagName(<span class="string">"div"</span>)[0].style.color;</div><div class="line">        var Midcolor=document.getElementsByTagName(<span class="string">"div"</span>)[1].style.color;</div><div class="line">        var Higcolor=document.getElementsByTagName(<span class="string">"div"</span>)[2].style.color;</div><div class="line">        var str=document.getElementById(<span class="string">"txt"</span>).value;</div><div class="line">            switch(Num(str))&#123;</div><div class="line">              <span class="keyword">case</span> 0:</div><div class="line">              alert(<span class="string">"请输入正确的密码形式：数字，字母和一些特殊符号"</span>);</div><div class="line">              <span class="built_in">break</span>;</div><div class="line">              <span class="keyword">case</span> 1:</div><div class="line">              Lowcolor=<span class="string">"red"</span>;</div><div class="line">              <span class="built_in">break</span>;</div><div class="line">              <span class="keyword">case</span> 2:</div><div class="line">              Lowcolor=Midcolor=<span class="string">"yellow"</span>;</div><div class="line">              <span class="built_in">break</span>;</div><div class="line">              <span class="keyword">case</span> 3:</div><div class="line">              Lowcolor=Midcolor=Higcolor=<span class="string">"green"</span>;</div><div class="line">              <span class="built_in">break</span>;</div><div class="line">          &#125;</div><div class="line">      &#125;</div></pre></td></tr></table></figure></p>
+<h3 id="密码强度检测"><a href="#密码强度检测" class="headerlink" title="密码强度检测"></a>密码强度检测</h3><p>这里我们用到简单的正则验证，加上一些if语句的应用，贴上代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Num(y)&#123;</div><div class="line">           var x=0;</div><div class="line">           <span class="keyword">if</span>(str.match(/[0-9]/))&#123;</div><div class="line">               x++;</div><div class="line">           &#125;</div><div class="line">           <span class="keyword">if</span>(str.match(/[a-z]/))&#123;</div><div class="line">               x++;</div><div class="line">           &#125;</div><div class="line">           <span class="keyword">if</span>(str.match(/[^0-9a-z]/))&#123;</div><div class="line">               x++</div><div class="line">           &#125;</div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
+<p>这里我要说明一下。就是关于编程函数思想，就是将A函数中的参数转换成B函数中的结果，达到函数之间互相联系的结果，这是重要的一种思想。<br>最后在这里添加一个事件监听，就大功告成了<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">addEventListener(<span class="string">"click"</span>,putStr,<span class="literal">false</span>);</div><div class="line">removeEventListener(<span class="string">"click"</span>,putStr,<span class="literal">false</span>);</div><div class="line">addEventListener(<span class="string">"blur"</span>,putStr,<span class="literal">false</span>);</div><div class="line">removeEventListener(<span class="string">"blur"</span>,putStr,<span class="literal">false</span>);</div></pre></td></tr></table></figure></p>
+<p>以上就是这次表单检测的全部结果了，如有不正之处，欢迎指正。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们知道在网页中，我们不可避免的要验证许多表单，因此我们今天就来写一个小的表单密码验证的小案例，来体会一下他的思想&lt;/p&gt;
+&lt;h2 id=&quot;css代码就不写了&quot;&gt;&lt;a href=&quot;#css代码就不写了&quot; class=&quot;headerlink&quot; title=&quot;css代码就不写了
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
