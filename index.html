@@ -156,6 +156,60 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-js算法基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/11/js算法基础/">js算法基础</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/11/js算法基础/" class="archive-article-date">
+  	<time datetime="2017-04-11T14:28:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我之前在fcc社区上面学习了一些js的基础算法，今天写出来分享给大家，也希望大家有些收获，能够在前端的道路上越走越远,</p>
+<p>##反转字符串<br>翻转字符串这个是之前面试过程中经常遇到的一个算法题，大同小异，无非就是些简答字符串方法的应用，<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">revStr</span></span>()&#123;</div><div class="line">  var narr=str.split(<span class="string">""</span>);//将字符串中的字符分割成数组</div><div class="line">  var revarr=narr.resverse();//将数组翻转</div><div class="line">  var revstr=revarr.join(<span class="string">""</span>);//将数组重新按照一定的规则组合起来 </div><div class="line">  <span class="built_in">return</span> revstr;</div><div class="line">&#125;</div><div class="line">revStr();</div></pre></td></tr></table></figure></p>
+<p>##递归求阶乘<br>主要是将上一次运算的结果保留下来作为下一次运算的值，从而实现递归运算<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">    <span class="keyword">function</span> numAdd(num)&#123;</div><div class="line">      <span class="built_in">return</span> (num*numAdd(num-1));</div><div class="line">&#125;</div><div class="line">numAdd(7);//7*6*5*4*3*2*1*0*-1....；会一直运算下去</div></pre></td></tr></table></figure></p>
+<p>以上的7的阶乘会一直运算下去，所以我们来给他修改一下，加一个判断条件，防止他一直运算下去<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">    <span class="keyword">function</span> numAdd(num)&#123;</div><div class="line">        <span class="keyword">if</span>(num&gt;0)&#123;//加一个判断条件，当num&gt;0时，执行以下代码</div><div class="line">            <span class="built_in">return</span> (num*numAdd(num-1));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/11/js算法基础/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-js密码强度验证" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
