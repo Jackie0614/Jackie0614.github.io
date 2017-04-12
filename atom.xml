@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Jackie0614.github.io/"/>
-  <updated>2017-04-11T15:18:00.168Z</updated>
+  <updated>2017-04-12T15:45:14.945Z</updated>
   <id>http://Jackie0614.github.io/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何实现二级下拉菜单</title>
+    <link href="http://Jackie0614.github.io/2017/04/12/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%BA%8C%E7%BA%A7%E4%B8%8B%E6%8B%89%E8%8F%9C%E5%8D%95/"/>
+    <id>http://Jackie0614.github.io/2017/04/12/如何实现二级下拉菜单/</id>
+    <published>2017-04-12T15:28:48.000Z</published>
+    <updated>2017-04-12T15:45:14.945Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天去旁听计科学院的课，老师用jq实现了一个二级下拉菜单，现在写出来分享给大家，实现过程比较简单，jq部分是比较简单的，有点难度的是css部分</p>
+<p>##css部分<br>css部分主要是把a标签转化成块级元素，消除li的padding属性，然后就是运用displayde属性，使他们隐藏。使他们的菜单跟栏目在一列，现在贴出css部分<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">ul,li,a&#123;</div><div class="line">          margin:0;</div><div class="line">          padding:0;</div><div class="line">      &#125;</div><div class="line">      ul &#123;</div><div class="line">          list-style: none;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav li&#123;</span></div><div class="line">          text-align: center;</div><div class="line"></div><div class="line">      &#125;</div><div class="line">        ul li:hover&#123;</div><div class="line">          background: yellow;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav li a&#123;</span></div><div class="line">          text-decoration: none;</div><div class="line">          display: block;</div><div class="line">          width: 80px;</div><div class="line">          height: 40px;</div><div class="line">          line-height: 40px;</div><div class="line">          background-color: gray;</div><div class="line">          margin:1px 1px 0 0 ;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav&gt;li&#123;</span></div><div class="line">          <span class="built_in">float</span>: left;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav&gt;li ul&#123;</span></div><div class="line">          display: none;</div><div class="line">      &#125;</div></pre></td></tr></table></figure></p>
+<p>##js部分<br>js部分主要是注意this的使用，this这是个难点，我也不是很懂，不过这里只是一个简单的运用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#nav&gt;li"</span>).mouseover(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">           $(this).find(<span class="string">"ul"</span>).show();</div><div class="line">        &#125;)</div><div class="line">        $(<span class="string">"#nav&gt;li"</span>).mouseout(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            /* Act on the event */</div><div class="line">            $(<span class="string">"#nav&gt;li ul"</span>).hide();</div><div class="line">        &#125;)</div></pre></td></tr></table></figure></p>
+<p>以上就是本次代码了，如有错误，欢迎指正</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天去旁听计科学院的课，老师用jq实现了一个二级下拉菜单，现在写出来分享给大家，实现过程比较简单，jq部分是比较简单的，有点难度的是css部分&lt;/p&gt;
+&lt;p&gt;##css部分&lt;br&gt;css部分主要是把a标签转化成块级元素，消除li的padding属性，然后就是运用displa
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>js算法基础</title>

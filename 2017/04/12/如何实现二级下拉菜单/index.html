@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://Jackie0614.github.io">
-  <title>Archives: 2017 | 朝惜</title>
+  <title>如何实现二级下拉菜单 | 朝惜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="朝惜">
-<meta property="og:url" content="http://Jackie0614.github.io/archives/2017/index.html">
+  <meta name="description" content="今天去旁听计科学院的课，老师用jq实现了一个二级下拉菜单，现在写出来分享给大家，实现过程比较简单，jq部分是比较简单的，有点难度的是css部分
+##css部分css部分主要是把a标签转化成块级元素，消除li的padding属性，然后就是运用displayde属性，使他们隐藏。使他们的菜单跟栏目在一列，现在贴出css部分1234567891011121314151617181920212223242">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何实现二级下拉菜单">
+<meta property="og:url" content="http://Jackie0614.github.io/2017/04/12/如何实现二级下拉菜单/index.html">
 <meta property="og:site_name" content="朝惜">
-<meta property="og:description" content="前端开发">
+<meta property="og:description" content="今天去旁听计科学院的课，老师用jq实现了一个二级下拉菜单，现在写出来分享给大家，实现过程比较简单，jq部分是比较简单的，有点难度的是css部分
+##css部分css部分主要是把a标签转化成块级元素，消除li的padding属性，然后就是运用displayde属性，使他们隐藏。使他们的菜单跟栏目在一列，现在贴出css部分1234567891011121314151617181920212223242">
+<meta property="og:updated_time" content="2017-04-12T15:45:14.945Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="朝惜">
-<meta name="twitter:description" content="前端开发">
+<meta name="twitter:title" content="如何实现二级下拉菜单">
+<meta name="twitter:description" content="今天去旁听计科学院的课，老师用jq实现了一个二级下拉菜单，现在写出来分享给大家，实现过程比较简单，jq部分是比较简单的，有点难度的是css部分
+##css部分css部分主要是把a标签转化成块级元素，消除li的padding属性，然后就是运用displayde属性，使他们隐藏。使他们的菜单跟栏目在一列，现在贴出css部分1234567891011121314151617181920212223242">
   
     <link rel="alternative" href="/atom.xml" title="朝惜" type="application/atom+xml">
   
@@ -154,130 +158,141 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-如何实现二级下拉菜单" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      如何实现二级下拉菜单
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/12/如何实现二级下拉菜单/" class="archive-article-date">
+
+        
+        <a href="/2017/04/12/如何实现二级下拉菜单/" class="archive-article-date">
   	<time datetime="2017-04-12T15:28:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/12/如何实现二级下拉菜单/">如何实现二级下拉菜单</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天去旁听计科学院的课，老师用jq实现了一个二级下拉菜单，现在写出来分享给大家，实现过程比较简单，jq部分是比较简单的，有点难度的是css部分</p>
+<p>##css部分<br>css部分主要是把a标签转化成块级元素，消除li的padding属性，然后就是运用displayde属性，使他们隐藏。使他们的菜单跟栏目在一列，现在贴出css部分<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">ul,li,a&#123;</div><div class="line">          margin:0;</div><div class="line">          padding:0;</div><div class="line">      &#125;</div><div class="line">      ul &#123;</div><div class="line">          list-style: none;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav li&#123;</span></div><div class="line">          text-align: center;</div><div class="line"></div><div class="line">      &#125;</div><div class="line">        ul li:hover&#123;</div><div class="line">          background: yellow;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav li a&#123;</span></div><div class="line">          text-decoration: none;</div><div class="line">          display: block;</div><div class="line">          width: 80px;</div><div class="line">          height: 40px;</div><div class="line">          line-height: 40px;</div><div class="line">          background-color: gray;</div><div class="line">          margin:1px 1px 0 0 ;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav&gt;li&#123;</span></div><div class="line">          <span class="built_in">float</span>: left;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav&gt;li ul&#123;</span></div><div class="line">          display: none;</div><div class="line">      &#125;</div></pre></td></tr></table></figure></p>
+<p>##js部分<br>js部分主要是注意this的使用，this这是个难点，我也不是很懂，不过这里只是一个简单的运用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#nav&gt;li"</span>).mouseover(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">           $(this).find(<span class="string">"ul"</span>).show();</div><div class="line">        &#125;)</div><div class="line">        $(<span class="string">"#nav&gt;li"</span>).mouseout(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            /* Act on the event */</div><div class="line">            $(<span class="string">"#nav&gt;li ul"</span>).hide();</div><div class="line">        &#125;)</div></pre></td></tr></table></figure></p>
+<p>以上就是本次代码了，如有错误，欢迎指正</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACq0lEQVR42u3aUW7CUAwEQO5/aXoAlLC2n4FKk6+qosSTjzx37ccjvp4v19Vn7v/q/nr9nuS+By48PDy8celXt0x4SbmTx5HXjIeHh7fNu3/RX5WSHwzJb/KDJz+c8PDw8H6Td1VW8le9x4eHh4f3v3jVlncSMSRtOh4eHt63eHm0Wk1Q7w+P5JMfylrw8PDwYl6v0O/+vDLfw8PDwxtP1fN2ef7I7mtrVouHh4e3wMtfuPnSQF5or4Eu14mHh4e3wMuD2mqEmi9g5fet3gUPDw/vLK8XgFZXpnrI3hAump7h4eHhHeLlze6pRrw6hCuvFODh4eEt85IXdHWJqhde5CFveQCGh4eHd5TXiyR68e6kaS7UgIeHh7fAqxaax6nzoyIPLN4o8PDw8D7Cq6465a/4U6sJhe/Hw8PDW+ZVG98qrDzEKoYmUVaNh4eHd4h3Kg7IS8wXDpJH9mYMhoeHh7fAy7/ibFm9iGHUUuPh4eGNeflyat5Sbxwex1YK8PDw8Aa8SdzQe1nPj4p8CIeHh4e3zeu99KuDtLztno/c8PDw8DZ4+SC/94KerFVN1gvw8PDwPsnLx13VB9F7HJPFLDw8PLwN3iQq7R0eeQCRDMPKxwAeHh7emFdtppP4oPdt1TWFw1sSeHh4eEVe/pLNx/+T5rgXIj8mRePh4eEd5U0WqqoPrrfE0Iwk8PDw8Ma8SRyQ3753PEwGY3h4eHhnec/idf9QqkOyyUs/ujseHh7eAm/yH32+QJBHt9UIOGnQ8fDw8DZ4ZwdO1YFWLwopHBt4eHh4a7xetFotOr9XL6S4jCTw8PDwvsrLG9+8He8dA1GdeHh4eD/A22iRe01zdHjg4eHhrfF661O9ICOPgPNFhzcHAx4eHt5RXvOf/FagUIUdKB0PDw/vJO8PUxvQdQAhpskAAAAASUVORK5CYII=" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/js算法基础/" class="archive-article-date">
-  	<time datetime="2017-04-11T14:28:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/js算法基础/">js算法基础</a>
-    </h1>
+  
+    <a href="/2017/04/11/js算法基础/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js算法基础</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/js密码强度验证/" class="archive-article-date">
-  	<time datetime="2017-04-10T23:44:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/js密码强度验证/">js密码强度验证</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/29/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-29T14:30:45.472Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -300,8 +315,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
