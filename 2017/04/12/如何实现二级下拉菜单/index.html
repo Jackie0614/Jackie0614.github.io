@@ -9,18 +9,18 @@
   <title>如何实现二级下拉菜单 | 朝惜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="今天去旁听计科学院的课，老师用jq实现了一个二级下拉菜单，现在写出来分享给大家，实现过程比较简单，jq部分是比较简单的，有点难度的是css部分
-##css部分css部分主要是把a标签转化成块级元素，消除li的padding属性，然后就是运用displayde属性，使他们隐藏。使他们的菜单跟栏目在一列，现在贴出css部分1234567891011121314151617181920212223242">
+css部分css部分主要是把a标签转化成块级元素，消除li的padding属性，然后就是运用displayde属性，使他们隐藏。使他们的菜单跟栏目在一列，现在贴出css部分123456789101112131415161718192021222324252">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何实现二级下拉菜单">
 <meta property="og:url" content="http://Jackie0614.github.io/2017/04/12/如何实现二级下拉菜单/index.html">
 <meta property="og:site_name" content="朝惜">
 <meta property="og:description" content="今天去旁听计科学院的课，老师用jq实现了一个二级下拉菜单，现在写出来分享给大家，实现过程比较简单，jq部分是比较简单的，有点难度的是css部分
-##css部分css部分主要是把a标签转化成块级元素，消除li的padding属性，然后就是运用displayde属性，使他们隐藏。使他们的菜单跟栏目在一列，现在贴出css部分1234567891011121314151617181920212223242">
-<meta property="og:updated_time" content="2017-04-12T15:45:14.945Z">
+css部分css部分主要是把a标签转化成块级元素，消除li的padding属性，然后就是运用displayde属性，使他们隐藏。使他们的菜单跟栏目在一列，现在贴出css部分123456789101112131415161718192021222324252">
+<meta property="og:updated_time" content="2017-04-16T12:59:14.122Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何实现二级下拉菜单">
 <meta name="twitter:description" content="今天去旁听计科学院的课，老师用jq实现了一个二级下拉菜单，现在写出来分享给大家，实现过程比较简单，jq部分是比较简单的，有点难度的是css部分
-##css部分css部分主要是把a标签转化成块级元素，消除li的padding属性，然后就是运用displayde属性，使他们隐藏。使他们的菜单跟栏目在一列，现在贴出css部分1234567891011121314151617181920212223242">
+css部分css部分主要是把a标签转化成块级元素，消除li的padding属性，然后就是运用displayde属性，使他们隐藏。使他们的菜单跟栏目在一列，现在贴出css部分123456789101112131415161718192021222324252">
   
     <link rel="alternative" href="/atom.xml" title="朝惜" type="application/atom+xml">
   
@@ -179,8 +179,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>今天去旁听计科学院的课，老师用jq实现了一个二级下拉菜单，现在写出来分享给大家，实现过程比较简单，jq部分是比较简单的，有点难度的是css部分</p>
-<p>##css部分<br>css部分主要是把a标签转化成块级元素，消除li的padding属性，然后就是运用displayde属性，使他们隐藏。使他们的菜单跟栏目在一列，现在贴出css部分<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">ul,li,a&#123;</div><div class="line">          margin:0;</div><div class="line">          padding:0;</div><div class="line">      &#125;</div><div class="line">      ul &#123;</div><div class="line">          list-style: none;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav li&#123;</span></div><div class="line">          text-align: center;</div><div class="line"></div><div class="line">      &#125;</div><div class="line">        ul li:hover&#123;</div><div class="line">          background: yellow;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav li a&#123;</span></div><div class="line">          text-decoration: none;</div><div class="line">          display: block;</div><div class="line">          width: 80px;</div><div class="line">          height: 40px;</div><div class="line">          line-height: 40px;</div><div class="line">          background-color: gray;</div><div class="line">          margin:1px 1px 0 0 ;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav&gt;li&#123;</span></div><div class="line">          <span class="built_in">float</span>: left;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav&gt;li ul&#123;</span></div><div class="line">          display: none;</div><div class="line">      &#125;</div></pre></td></tr></table></figure></p>
-<p>##js部分<br>js部分主要是注意this的使用，this这是个难点，我也不是很懂，不过这里只是一个简单的运用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#nav&gt;li"</span>).mouseover(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">           $(this).find(<span class="string">"ul"</span>).show();</div><div class="line">        &#125;)</div><div class="line">        $(<span class="string">"#nav&gt;li"</span>).mouseout(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            /* Act on the event */</div><div class="line">            $(<span class="string">"#nav&gt;li ul"</span>).hide();</div><div class="line">        &#125;)</div></pre></td></tr></table></figure></p>
+<h2 id="css部分"><a href="#css部分" class="headerlink" title="css部分"></a>css部分</h2><p>css部分主要是把a标签转化成块级元素，消除li的padding属性，然后就是运用displayde属性，使他们隐藏。使他们的菜单跟栏目在一列，现在贴出css部分<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">ul,li,a&#123;</div><div class="line">          margin:0;</div><div class="line">          padding:0;</div><div class="line">      &#125;</div><div class="line">      ul &#123;</div><div class="line">          list-style: none;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav li&#123;</span></div><div class="line">          text-align: center;</div><div class="line"></div><div class="line">      &#125;</div><div class="line">        ul li:hover&#123;</div><div class="line">          background: yellow;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav li a&#123;</span></div><div class="line">          text-decoration: none;</div><div class="line">          display: block;</div><div class="line">          width: 80px;</div><div class="line">          height: 40px;</div><div class="line">          line-height: 40px;</div><div class="line">          background-color: gray;</div><div class="line">          margin:1px 1px 0 0 ;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav&gt;li&#123;</span></div><div class="line">          <span class="built_in">float</span>: left;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">#nav&gt;li ul&#123;</span></div><div class="line">          display: none;</div><div class="line">      &#125;</div></pre></td></tr></table></figure></p>
+<h2 id="js部分"><a href="#js部分" class="headerlink" title="js部分"></a>js部分</h2><p>js部分主要是注意this的使用，this这是个难点，我也不是很懂，不过这里只是一个简单的运用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#nav&gt;li"</span>).mouseover(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">           $(this).find(<span class="string">"ul"</span>).show();</div><div class="line">        &#125;)</div><div class="line">        $(<span class="string">"#nav&gt;li"</span>).mouseout(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            /* Act on the event */</div><div class="line">            $(<span class="string">"#nav&gt;li ul"</span>).hide();</div><div class="line">        &#125;)</div></pre></td></tr></table></figure></p>
 <p>以上就是本次代码了，如有错误，欢迎指正</p>
 
       
@@ -274,6 +274,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/04/16/js闭包问题详解/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          js闭包问题详解
+        
+      </div>
+    </a>
   
   
     <a href="/2017/04/11/js算法基础/" id="article-nav-older" class="article-nav-link-wrap">
